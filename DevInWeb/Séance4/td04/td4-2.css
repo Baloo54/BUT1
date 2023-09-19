@@ -1,0 +1,18 @@
+/* 
+  Ceci est un commentaire, il est ignoré par le navigateur.
+*/
+p{font-size: 1.0em;}
+p.Firstletter:first-letter{font-size: 2.0em;}
+.firstparagraphe   {background-color: gray;}
+a:visited{color: orange;}
+a:link{color: green;}
+a:hover{color: blue;}
+a.Firstlien:hover{font-size: 2.0em;}
+div{
+  background-color: gray;
+  opacity: 0.5;
+}
+body{
+  background: fixed;
+  background-image: url("fond.png");
+}
