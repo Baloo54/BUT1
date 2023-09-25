@@ -15,7 +15,6 @@ public class TestDate {
       assertEquals("erreur mois devrait etre 1", 1, d.mois);
       assertEquals("erreur annee devrait etre 1970", 1970, d.année);
     }
-
     /**
      * test du constructeur avec parametres
      */
