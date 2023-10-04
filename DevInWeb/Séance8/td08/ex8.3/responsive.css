@@ -1,0 +1,27 @@
+ul{
+    background-color: rgb(219, 214, 214);
+    margin-left: 2%;
+    margin-right: 2%;
+    border-bottom: 3px solid black;
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+@media screen and (min-width:60em) {
+    li{
+        display: block;
+        margin-right: 3em;
+        margin-bottom: 4px;
+    }
+    a{
+        
+    }
+}
+@media screen and (max-width:60em) {  
+    li{
+        display: inline-block;
+    }
+}

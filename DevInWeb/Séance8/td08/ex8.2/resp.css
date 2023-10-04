@@ -1,0 +1,56 @@
+body,section, article, aside {
+    padding: 0;
+    margin: 0;
+}
+
+section article:first-child {
+    background-color: maroon;
+}
+
+article + article {
+    background-color: greenyellow;
+}
+
+aside {
+    background-color: rosybrown;
+}
+
+section, article, aside {
+    width:100%;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;   
+}
+
+article, aside {
+    padding: 10px;
+}
+@media screen and (min-width:1000px) {
+    section article:first-child{
+        background-color: yellow;
+    }
+}
+@media  screen and (max-width:640px) {
+    section, aside{
+        font-family: Arial;
+    }
+}
+@media screen and (min-width:60em){
+    article{
+        display: inline-block;
+        vertical-align: top;
+        width: 50%;
+    }
+}
+@media screen and (min-width:35em) and (max-width:60em){
+    section{
+        display: inline-block;
+        vertical-align: top;
+        width: 66%;
+    }    
+    aside{
+        display: inline-block;
+        vertical-align: top;
+        width: 33%;
+    }
+}
