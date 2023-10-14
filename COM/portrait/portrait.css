@@ -1,0 +1,68 @@
+img{
+    max-width: 750px;
+    max-height: 750px;
+    grid-column: 1;
+    margin-left: 5em;
+}
+h1{
+    text-align: center;
+    font-weight: 1000;
+    font-size: 5em;
+}
+.centre{
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-row: auto;
+}
+.chapeau{
+    grid-column: 1;
+    text-align: center;
+    margin-right: 10em;
+    margin-left: 6em;
+    font-size: 1.3em;
+}
+.par1{
+    grid-column: 1;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+.p1{
+    text-align: justify ;
+    margin-left: 3em;
+    margin-right: 1em;
+    border-right: solid black 3px;
+    padding-right: 15px;
+}
+.p2{
+    text-align: justify;
+    margin-right: 6em;
+    border-right: solid black 3px;
+    padding-right: 15px;
+}
+.droite{
+    grid-column-start: 2;
+    margin-right: 30%;
+    margin-top: 24%;
+}
+.par2{
+    text-align: justify;
+}
+body{
+    background-color: rgb(248, 243, 243);
+}
+.date{
+    margin-left: 20%;
+    text-align: end;
+    text-align: justify;
+}
+.maj{
+    font-size: 2em;
+    font-weight: 600;
+}
+p{
+    font-size: 1.2em;
+}
+.color{
+    color: red;
+    font-weight: 700;
+}

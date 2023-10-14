@@ -102,11 +102,13 @@ public class Personne {
         Adresse a = new Adresse(adresse);
         this.adresse = a;
     }
-    public void setDateN(MaDate dateN) {
-        MaDate d = new MaDate(dateN);
-        this.dateN = d;
+    public void setDateN(MaDate dat) {
+        this.dateN = dat;
     }
     public boolean habiterMemeVille(Personne p){
         return this.adresse.avoirMemeVille(p.adresse);
+    }
+    public boolean etrePlusJeune(Personne p){
+        return false == this.dateN.etreAvant(p.dateN);
     }
   }

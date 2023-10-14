@@ -20,14 +20,7 @@ public class MaDate {
       this.annee = 1970;
     }
     public MaDate(int j, int m, int a) {
-      this.jour = j;
-      // verifie que le jour est correct
-      if (this.jour < 1)
-        this.jour = 1;
-      if (this.jour > 31) 
-        this.jour = 31;
-
-      this.mois = m;
+          this.mois = m;
       // verifie mois correct
       if (this.mois < 1)
         this.mois = 1;
@@ -35,6 +28,14 @@ public class MaDate {
         this.mois = 12;
   
       this.annee= a;
+      int k = getNbJours(); 
+      this.jour = j;
+      // verifie que le jour est correct
+      if (this.jour < 1)
+        this.jour = 1;
+      if (this.jour > k) 
+        this.jour = k;
+
     }
   
     /**
@@ -99,6 +100,9 @@ public class MaDate {
       }
       MaDate d = new MaDate(j, m, a);
       return d;
+    }
+    public boolean etreAvant(MaDate d){
+      return this.annee < d.annee ? true: (this.annee != d.annee ? false : ( this.mois < d.mois ? true : (this.mois != d.mois ? false : (this.jour < d.jour ? true : false)))); 
     }
   }
   
