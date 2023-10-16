@@ -7,3 +7,5 @@ echo $PATH
 emacs
 which
 esc + x + manual tab
+jobs
+ps Process Status

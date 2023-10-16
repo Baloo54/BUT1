@@ -59,7 +59,7 @@ public class TestHoraire {
         assertEquals("minutes attendu", 50, h1.minutes);
         assertEquals("secondes attendu", 59, h1.secondes);
         }
-    
+    //test9 horraire etre avant
 	// ##########################
 	// TODO : autres tests a ecrire ....
 	// ##########################

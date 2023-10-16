@@ -28,4 +28,11 @@ public class Horaire {
     public int convertirHoraireSeconde(){
         return (this.heures * 3600) + (this.minutes * 60) + this.secondes;
     }
+    public boolean horraireAncienne(Horaire h){
+        return this.heures < h.heures ? true : 
+        (this.heures != h.heures ? false : 
+        (this.minutes < h.minutes ? true : 
+        (this.minutes != h.minutes ? false : 
+        (this.secondes < h.secondes ? true : false))));
+    }
 }
