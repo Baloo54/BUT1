@@ -1,3 +1,7 @@
+@font-face {
+    font-family: 'Halloween Fears';
+    src: url('halloween_fears/Halloween\ Fears.ttf');
+}
 header{
     display: block;
     height: 13em;
@@ -12,23 +16,26 @@ ul{
 li{
     margin-left: 3%;
     margin-left: 3%;
-    font-size: 2.5em;
+    font-size: 2em;
 }
 h1{
     text-align: center;
     font-size: 4em;
+    font-family: 'Halloween Fears', cursive;
     color: black
 }
 li a{
     text-decoration: none;
     color: black;
     font-weight: 800;
+    font-family: 'Halloween Fears', cursive;
 }
 a:hover{
     box-shadow: 10px 5px 5px black;
 }
 p{
     text-align: justify;
+    font-family: Arial, Helvetica, sans-serif
 }
 img{
     max-height: 500px;
@@ -96,5 +103,15 @@ footer{
     height: 5em;
     border-top: solid black 1px;
     margin-top: 3em;
-
+}
+@media screen and (max-width: 1500px) {
+    .article1, .article2, .article3{
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    ul li{
+        font-size: 1.5em;
+    }
+}
+    
 }
