@@ -3,7 +3,7 @@ public class Arc {
      * attributs Arc : degat, fleches 
      */
     private int degat;
-    private int fleches;
+    private int fleches; 
     /**
     * constructeur par défaut
     */
