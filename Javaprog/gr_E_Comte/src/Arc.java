@@ -1,3 +1,6 @@
+/**
+ * class arc : construit un objet de type arc 
+ */
 public class Arc {
     /**
      * attributs Arc : degat, fleches 
@@ -22,12 +25,16 @@ public class Arc {
         this.fleches = fl > 0 ? fl : 0;
     }
     /**
-     * méthodes Accesseurs: getDegat, getFleches
-     * @return degat, fleches
+     * méthodes Accesseur: getDegat
+     * @return degat
      */
     public int getDegats() {
         return this.degat;
     }
+    /**
+     * méthode Accesseur : getFleches
+     * @return
+     */
     public int getFleches() {
         return this.fleches;
     }

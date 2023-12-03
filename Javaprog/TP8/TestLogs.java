@@ -251,8 +251,9 @@ public class TestLogs {
 			tab[i][1] = premier[i];
 			tab[i][30] = trente[i];
 		}
-
+		
 		Logs nb=new Logs(tab);
+		System.out.println(nb);
 		assertEquals("probleme ordre construction", 24, nb.getNbrConnexions()[0]);
 		assertEquals("probleme ordre construction", 25, nb.getNbrConnexions()[11]);
 		assertEquals("Min pas mis a jour", 14, nb.getMin());

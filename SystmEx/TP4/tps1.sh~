@@ -1,0 +1,8 @@
+#!/bin/bash
+if [ $# -ne ];then
+    echo "2 arguments"
+    exit 2
+else
+    echo "oki"
+    exit 0
+fi    

@@ -1,0 +1,29 @@
+FICHET;54;nancy;GEA
+dupond;54;nancy;TC
+FaCTeur;54;Longwy;INF
+durand;54;toul;INF
+durant;90;belfort;IC
+dubois;55;Pagny sur Meuse;SRC
+laurent;54;longwy;IC
+LEGEAY;54;Briey;IC
+martin;54;frouard;IC
+marin;54;dieulouard;INF
+Nanceen;54;nancy;INF
+pierre;54;marbache;GEA
+antoine;54;nancy;IC
+dupond;55;verdun;SRC
+derien;55;bar le duc;TC
+vincent;55;st mihiel;GEA
+vinfond;88;Hadol;GEA
+antonin;55;verdun;INF
+marcel;55;bar le duc;TC
+philippe;55;ligny en barrois;GEA
+case;55;nantois;SRC
+romain;57;metz;GEA
+julien;57;yutz;INF
+boubar;57;pagny sur moselle;IC
+grasp;57;metz;TC
+commercial;88;PLAINFAING;IC
+priset;57;metz;INF
+Price;57;metz;INF
+

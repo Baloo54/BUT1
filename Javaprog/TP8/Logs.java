@@ -15,8 +15,7 @@ class Logs{
 	 *            nombre de mois d'etude (au moins 1)
 	 */
     public Logs(int n){
-        if(n>0)this.connexions = new int[n];
-        else this.connexions = new int[1];
+		this.connexions = n > 0 ? new int[n] : new int[1];
     }
 
 	// ################ QUESTION 2 ########################
@@ -137,7 +136,14 @@ class Logs{
 	 *            tableau a 2 dimensions
 	 */
 	public Logs(int[][] tab2D) {
-    
+		this.connexions = new int[12];
+		for(int i = 0; i <= 11; i++){
+			for(int j = 0; j <= 30; j++){
+				this.connexions[i] += tab2D[i][j];
+			}
+		}
+		this.inverserConnexions();
+		this.calculMinMaxMoy();
 	}
 	// ################ QUESTION 8 ########################
 
@@ -145,7 +151,18 @@ class Logs{
 	 * tri decroissant par selection
 	 */
 	public void trierDecroissantConnexions() {
-		throw new Error("TODO");
+		int indDeb = 0;
+		int indFin = this.connexions.length - 1;
+		while(indDeb < indFin){
+			int indMax = indDeb;
+			for(int i = indDeb + 1; i <= indFin; i++){
+				if(this.connexions[i] > this.connexions[indMax]) indMax = i;
+			}
+			int tmp = this.connexions[indDeb];
+			this.connexions[indDeb] = this.connexions[indMax];
+			this.connexions[indMax] = tmp;
+			indDeb ++;
+		}
 	}
 
 
@@ -155,7 +172,19 @@ class Logs{
 	 * faire un tri decroissant par une methode a bulle
 	 */
 	public void trierDecroissantBulle() {
-		throw new Error("TODO");
+		//rajout condidtion fin de tri
+		boolean fini = false;
+		while(!fini){
+			fini = true;
+			for(int i = 0; i < this.connexions.length - 1; i++){
+				if(this.connexions[i] < this.connexions[i+1]){
+					int tmp = this.connexions[i];
+					this.connexions[i] = this.connexions[i+1];
+					this.connexions[i+1] = tmp;
+					fini = false;
+				}
+			}
+		}
 	}
 
 

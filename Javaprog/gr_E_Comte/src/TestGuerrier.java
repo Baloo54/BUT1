@@ -1,5 +1,3 @@
-//import libtest.Test;
-
 import static libtest.Lanceur.lancer;
 import static libtest.OutilTest.assertEquals;
 
@@ -28,7 +26,7 @@ public class TestGuerrier {
 		// verifications
 		assertEquals("guerrier doit avoir 10 pv", 10, guerrier.getPv());
 		assertEquals("guerrier doit avoir un arc", null, guerrier.getArc());
-		assertEquals("guerrier doit avoir un nom", "Guerrier", guerrier.getNom());
+		assertEquals("guerrier doit avoir un nom", "Baloo", guerrier.getNom());
 	}
 	/**
 	 *  test constructeur avec un paramètre nom null	
@@ -114,7 +112,7 @@ public class TestGuerrier {
 	 */
 	public void test_subirDegat_mort() {
 		// preparation des donnees
-		Guerrier guerrier = new Guerrier("Baloo", 7);
+		Guerrier guerrier = new Guerrier("Baloo", 3);
 		// methode testee
 		guerrier.subirDegat(5);
 		// verifications
@@ -152,6 +150,8 @@ public class TestGuerrier {
 	public void test_prendreArc_guerrier_blesse() {
 		// preparation des donnees
 		Guerrier guerrier = new Guerrier("Baloo", 0);
+		//mettre à zéro les pv de les pv du guerrier car constructeur à mis pv à 1
+		guerrier.subirDegat(1);	
 		Arc arc = new Arc(3,5);
 		// methode testee
 		boolean res = guerrier.prendreArc(arc);
@@ -211,6 +211,8 @@ public class TestGuerrier {
 		Arc arc = new Arc(3,5);
 		guerrier.prendreArc(arc);
 		// methode testee
+		//mettre à zéro les pv de les pv du guerrier car constructeur à mis pv à 1
+		guerrier.subirDegat(1);
 		Arc res = guerrier.poserArc();
 		// verifications
 		assertEquals("guerrier doit avoir un arc", arc, guerrier.getArc());
@@ -251,6 +253,8 @@ public class TestGuerrier {
 	public void test_attaquer_guerrier_blesse() {
 		// preparation des donnees
 		Guerrier guerrier = new Guerrier("Baloo", 0);
+		//mettre à zéro les pv de les pv du guerrier car constructeur à mis pv à 1
+		guerrier.subirDegat(1);
 		Guerrier victime = new Guerrier("Mowgli", 5);
 		Arc arc = new Arc(3,5);
 		guerrier.prendreArc(arc);
@@ -267,6 +271,8 @@ public class TestGuerrier {
 		// preparation des donnees
 		Guerrier guerrier = new Guerrier("Baloo", 5);
 		Guerrier victime = new Guerrier("Mowgli", 0);
+		//mettre à zéro les pv de les pv de la victime car constructeur à mis pv à 1
+		victime.subirDegat(1);
 		Arc arc = new Arc(3,5);
 		guerrier.prendreArc(arc);
 		// methode testee

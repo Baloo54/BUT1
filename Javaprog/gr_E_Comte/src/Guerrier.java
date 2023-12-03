@@ -1,3 +1,6 @@
+/**
+ * class guerrier : construit un objet de type guerrier
+ */
 public class Guerrier {
      /**
      * attributs Guerrier : nom, pv, arc
@@ -30,16 +33,26 @@ public class Guerrier {
         this.arc = null;
     }
     /**
-     * méthode Accesseur: getPv, getArc, getNom
+     * méthode Accesseur: getPv
      * 
-     * @return pv, arc, nom
+     * @return Pv
      */
     public int getPv() {
         return this.pv;
     }
+    /**
+     * méthode Accesseur: getArc
+     * 
+     * @return Arc
+     */
     public Arc getArc() {
         return this.arc;
     }
+    /**
+     * méthode Accesseur: getNom
+     * 
+     * @return Nom
+     */ 
     public String getNom() {
         return this.nom;
     }
