@@ -3,7 +3,7 @@
  * 
  */
 public class Dico {
-
+	private Citation[] citations;
 	
 
 	/**
@@ -11,7 +11,7 @@ public class Dico {
 	 * citations tableau taille 0
 	 */
 	public Dico() {
-		throw new Error("a faire");
+		citations = new Citation[0];
 	}
 
 	/**
@@ -20,7 +20,7 @@ public class Dico {
 	 * @return taille de citations
 	 */
 	public int donnerNombre() {
-		throw new Error("a faire");
+		return citations.length;
 	}
 
 	/**
@@ -29,8 +29,20 @@ public class Dico {
 	 * 
 	 */
 	public void ajouterCitation(String pNom, String pCite, String[] pClefs) {
-		throw new Error("a faire");
-	}
+		Citation c = new Citation(pNom, pCite, pClefs);
+		Citation[] tab = new Citation[citations.length + 1];
+		int i = 0;
+		while (i < citations.length && citations[i].comparer(c) < 0) {
+			tab[i] = citations[i];
+			i++;
+		}
+		tab[i] = c;
+		while (i < citations.length) {
+			tab[i+1] = citations[i];
+			i++;
+		}
+		citations = tab;
+	}	
 
 	/**
 	 * retourne une citation au hasard
@@ -38,7 +50,9 @@ public class Dico {
 	 * @return citation prise au hasard
 	 */
 	public Citation donnerAuHasard() {
-		throw new Error("a faire");
+		int taille = citations.length;
+		MesMaths m = new MesMaths();
+		return taille > 0 ? citations[m.choisirHasard(taille)] : null;
 	}
 
 	/**
@@ -49,8 +63,23 @@ public class Dico {
 	 * @return la liste des citations possedant ce mot clef
 	 */
 	Citation[] recupererCitationMot(String pMot) {
-		throw new Error("a faire");
-
+		int taille = citations.length;
+		Citation[] tab = new Citation[taille];
+		int i = 0;
+		int j = 0;
+		while (i < taille) {
+			if (citations[i].possederClef(pMot)) {
+				tab[j++] = citations[i];
+			}
+			i++;
+		}
+		Citation[] res = new Citation[j];
+		i = 0;
+		while (i < j) {
+			res[i] = tab[i];
+			i++;
+		}
+		return res;
 	}
 
 	/**
@@ -59,7 +88,19 @@ public class Dico {
 	 * @return liste des auteurs
 	 */
 	String[] recupererAuteurs() {
-		throw new Error("a faire");
+		String[] tab = new String[citations.length];
+		int i = 0;
+		while (i < citations.length) {
+			boolean trouve = false;
+			int j = 0; 
+			while(j < i && !trouve){
+				if (tab[j] != null) trouve = tab[j++].equals(citations[i].getAuteur());
+				else j++;
+			}
+			if (!trouve)tab[i] = citations[i++].getAuteur();
+			else tab[i++] = null;
+		}
+		return tab;
 	}
 
 	public static void main(String[] args) {
@@ -98,7 +139,7 @@ public class Dico {
 	}
 
 	public Citation[] getCitations() {
-		throw new Error("a faire");
+		return citations;
 	}
 
 }

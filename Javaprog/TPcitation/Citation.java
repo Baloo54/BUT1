@@ -63,19 +63,30 @@ public class Citation {
 	 */
 	public boolean possederClef(String c) {
 		boolean res = false;
+		if (clefs == null) return res;
 		int i = 0;
-		while (!res && i < clefs.length && clefs != null){
+		while ((!res) && i < (clefs.length) && (c != null)){
 			if(clefs[i++].contains(c)) res = true;
 		}
 		return res;
 	}
 
 	/**
-	 * surcharge methode toString
+	 * surcharge methode toString 
+	 * sous la forme
+	 * auteur - phrase
+	 * [motclef1; motclef2; motcle3]
 	 */
 	public String toString() {
-		throw new Error("a faire");
-
+		String res = auteur + " - " + cite + "\n";
+		if (clefs != null) {
+			res += "[";
+			for (int i = 0; i < clefs.length; i++) {
+				res += clefs[i] + "; ";
+			}
+			res += "]";
+		}
+		return res;
 	}
 
 	/**
