@@ -1,0 +1,8 @@
+fonction afficherListe(l:Liste)
+    debut
+        place <-- tete(l)
+        tant que non finliste(l, place) faire
+            ecrire(val(l,place))
+            place <-- suc(l,place)
+        ftant
+    fin

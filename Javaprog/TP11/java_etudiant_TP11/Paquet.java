@@ -51,9 +51,6 @@ class Paquet{
         cartes = tabTmp;
     }
     public void ajouterCarte(Carte c, int place){
-        if (cartes.length - 1 < place || place < 0) {
-            return;
-        }
         int taille = cartes.length;
         int d = place + 1;
         Carte[] tabTmp = new Carte[taille + 1];
